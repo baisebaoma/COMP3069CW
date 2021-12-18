@@ -1,0 +1,7 @@
+PROJECT_NAME     = G53GRA.Framework
+INPUT            = ./Framework/Engine ./Framework/Utility ./Framework/Interface ./Code
+WARNINGS         = YES
+FILE_PATTERNS    = *.cpp *.h
+SEARCH_INCLUDES  = NO
+OUTPUT_DIRECTORY = ./Documentation
+IGNORE_PREFIX    = tag

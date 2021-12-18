@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Code\Lamp.cpp" />
+    <ClCompile Include="Code\main.cpp" />
+    <ClCompile Include="Code\MyScene.cpp" />
+    <ClCompile Include="Framework\Engine\Engine.cpp" />
+    <ClCompile Include="Framework\Engine\Scene.cpp" />
+    <ClCompile Include="Framework\Utility\Camera.cpp" />
+    <ClCompile Include="Framework\Utility\Texture.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Code\Lamp.h" />
+    <ClInclude Include="Code\LampMesh.h" />
+    <ClInclude Include="Code\MyScene.h" />
+    <ClInclude Include="Framework\Engine\Engine.h" />
+    <ClInclude Include="Framework\Engine\Scene.h" />
+    <ClInclude Include="Framework\Interface\Animation.h" />
+    <ClInclude Include="Framework\Interface\DisplayableObject.h" />
+    <ClInclude Include="Framework\Interface\Input.h" />
+    <ClInclude Include="Framework\Utility\Camera.h" />
+    <ClInclude Include="Framework\Utility\Texture.h" />
+    <ClInclude Include="Framework\Utility\VectorMath.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CE3A8304-475E-425E-BA11-FDAA6293C905}</ProjectGuid>
+    <RootNamespace>G53GRAFramework</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>.\Framework;.\Code;.\Code\Demos;.\Framework\Utility;.\Framework\Interface;.\Framework\Engine;../freeglut/include</AdditionalIncludeDirectories>
+      <TreatWarningAsError>true</TreatWarningAsError>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>../freeglut/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
